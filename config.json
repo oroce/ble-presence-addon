@@ -1,0 +1,24 @@
+{
+  "name": "BLE presence tracker",
+  "version": "1",
+  "slug": "ble_presence",
+  "description": "Track ble devices",
+  "startup": "before",
+  "boot": "auto",
+  "options": {
+    "mqtt": {
+      "prefix": "home/location",
+      "url": "mqtt://localhost:1883"
+    },
+    "whitelist-macs": [],
+    "whitelist": []
+  },
+  "schema": {
+    "mqtt": {
+      "prefix": "str",
+      "url": "str"
+    },
+    "whitelist-macs": ["str"],
+    "whitelist": ["str"]
+  }
+}
