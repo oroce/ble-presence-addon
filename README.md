@@ -6,7 +6,8 @@ BLE Tracker addon for hass.io
 # Configuration
 
 ```
-"mqtt": {
+{
+  "mqtt": {
     "prefix": "home/location",
     "url": "mqtt://localhost:1883"
   },

@@ -11,6 +11,4 @@ WORKDIR /usr/src/app
 COPY . .
 RUN chmod a+x ./run.sh
 
-RUN npm install
-
 CMD [ "./run.sh" ]
