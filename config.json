@@ -3,7 +3,7 @@
   "version": "1",
   "slug": "ble_presence",
   "description": "Track ble devices",
-  "startup": "before",
+  "startup": "application",
   "boot": "auto",
   "options": {
     "mqtt": {

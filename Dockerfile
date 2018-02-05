@@ -3,10 +3,14 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache jq node
+RUN apk add --no-cache jq nodejs nodejs-npm python build-base
+RUN npm set unsafe-perm true
 
 # Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
+WORKDIR /usr/src/app
+COPY . .
+RUN chmod a+x ./run.sh
 
-CMD [ "/run.sh" ]
+RUN npm install
+
+CMD [ "./run.sh" ]
