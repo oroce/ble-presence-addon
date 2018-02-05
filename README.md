@@ -18,3 +18,18 @@ BLE Tracker addon for hass.io
 `whitelist-macs`: array of mac addresses
 
 `whitelist`: array of device names
+
+
+# Building
+
+## Locally
+
+`docker build --build-arg BUILD_FROM="homeassistant/amd64-base:latest" -t local/ble-presence-addon:latest .`
+
+## Remotely
+
+`docker build --build-arg BUILD_FROM="homeassistant/amd64-base:latest" -t ble-presence-addon:latest github.com/oroce/ble-presence-addon`
+
+# License
+
+MIT
